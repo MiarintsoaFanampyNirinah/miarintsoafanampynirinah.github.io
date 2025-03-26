@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #FFFFFF; /* Couleur de fond */
+    color: #0C0C0C; /* Couleur du texte */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.loading-circle {
+    border: 5px solid #D7D7D7; /* Couleur de fond du cercle */
+    border-top: 5px solid #717D7D; /* Couleur animée */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.home-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #FFFFFF; /* Texte blanc */
+    background-color: #717D7D; /* Fond du bouton */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.home-button:hover {
+    background-color: #0C0C0C; /* Couleur au survol */
+}

@@ -1,0 +1,99 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  padding: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.main-section {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+}
+
+.left-section {
+  flex: 1;
+}
+
+.left-section img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+}
+
+.right-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.right-section h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.right-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.buttons .explore-btn,
+.buttons .video-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons .explore-btn {
+  background-color: #000;
+  color: #fff;
+}
+
+.buttons .video-btn {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+footer {
+  text-align: right;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+}
