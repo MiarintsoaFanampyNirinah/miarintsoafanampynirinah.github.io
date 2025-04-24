@@ -1,99 +1,100 @@
-/* Global Styles */
-body {
+* {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #fff;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
   color: #333;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #000;
+header, footer {
+  background-color: #1e1e2f;
   color: #fff;
+  text-align: center;
+  padding: 20px;
 }
 
-nav .logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-nav ul {
-  list-style: none;
+main {
   display: flex;
-  gap: 20px;
+  flex-direction: row;
+  height: calc(100vh - 140px);
 }
 
-nav ul li {
-  padding: 10px;
+.projets-list {
+  width: 25%;
+  min-width: 200px;
+  background-color: #ececec;
+  border-right: 1px solid #ccc;
+  padding: 20px;
+  overflow-y: auto;
 }
 
-nav ul li a {
+.projets-list ul {
+  list-style: none;
+}
+
+.projets-list li {
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #d4d4d4;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.projets-list li:hover {
+  background-color: #bcbcbc;
+}
+
+.projet-details {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.projet-content {
+  display: none;
+}
+
+.projet-content:not(.hidden) {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .projets-list {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .projet-details {
+    width: 100%;
+    height: 100%;
+  }
+}
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1e1e2f;
   color: #fff;
   text-decoration: none;
-  font-size: 16px;
+  border-radius: 6px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
-.main-section {
-  display: flex;
-  align-items: center;
-  padding: 50px;
-}
-
-.left-section {
-  flex: 1;
-}
-
-.left-section img {
-  width: 100%;
-  height: auto;
-  filter: grayscale(100%);
-}
-
-.right-section {
-  flex: 1;
-  padding: 20px;
-}
-
-.right-section h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.right-section p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.buttons {
-  display: flex;
-  gap: 20px;
-}
-
-.buttons .explore-btn,
-.buttons .video-btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.buttons .explore-btn {
-  background-color: #000;
-  color: #fff;
-}
-
-.buttons .video-btn {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
-}
-
-footer {
-  text-align: right;
-  padding: 20px;
-  background-color: #000;
-  color: #fff;
+.download-button:hover {
+  background-color: #333355;
 }
