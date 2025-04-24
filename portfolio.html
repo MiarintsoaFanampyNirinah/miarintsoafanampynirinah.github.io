@@ -1,40 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="styleportfolio.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mes Projets</title>
+  <link rel="stylesheet" href="styleportfolio.css" />
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <div class="logo">Miarintsoa Fanampy Nirinah</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#photo">Photo</a></li>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
-  <!-- Main Section -->
-  <section class="main-section">
-    <div class="left-section">
-      <img src="pdp.jpg" alt="Profile Image">
+  <header>
+    <h1>Mes Projets</h1>
+  </header>
+
+  <main>
+    <div class="projets-list">
+      <ul>
+        <li onclick="afficherProjet('projet1')">Projet 1</li>
+        <li onclick="afficherProjet('projet2')">Projet 2</li>
+        <li onclick="afficherProjet('projet3')">Projet 3</li>
+        <li onclick="afficherProjet('projet4')">Projet 4</li>
+      </ul>
     </div>
-    <div class="right-section">
-      <h1>My Portfolio</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-      <div class="buttons">
-        <button class="explore-btn">Explore Now</button>
-        <button class="video-btn">&#9654; Play Video</button>
+
+    <div class="projet-details">
+
+      <div id="projet1" class="projet-content">
+  <h2>Projet 1 - Portfolio Académique</h2>
+  <p>Ce projet est un portfolio académique développé dans le cadre de mon parcours en génie logiciel. Il regroupe mes projets réalisés durant ma formation, mes compétences, ainsi qu’un aperçu global de mon évolution dans le domaine du développement logiciel et du design numérique.</p>
+
+  <p>Le site a été conçu avec une approche moderne et responsive. L’interface met en avant la clarté, la fluidité de navigation et la hiérarchie visuelle. Le portfolio comprend plusieurs sections : présentation personnelle, expériences, projets détaillés, compétences techniques et contact.</p>
+
+  <h3>🔧 Compétences acquises</h3>
+  <ul>
+    <li>Conception d'interfaces web (HTML5, CSS3, JavaScript)</li>
+    <li>Responsive Design et Accessibilité</li>
+    <li>Optimisation SEO de base</li>
+    <li>Intégration PWA (Progressive Web App)</li>
+    <li>Versionnage de code (Git / GitHub)</li>
+    <li>Structuration d'un projet académique web</li>
+  </ul>
+
+  <h3>📦 Logiciels et technologies utilisées</h3>
+  <ul>
+    <li>Visual Studio Code</li>
+    <li>Figma (pour les maquettes UI/UX)</li>
+    <li>Google Chrome DevTools</li>
+    <li>Git & GitHub</li>
+    <li>HTML, CSS, JavaScript (vanilla)</li>
+  </ul>
+
+  <h3>🎥 Vidéo de démonstration</h3>
+  <div style="margin: 20px 0;">
+   <iframe width="100%" height="315" src="https://www.youtube.com/embed/qC5KtatMcUw" title="Vidéo portfolio académique" frameborder="0" allowfullscreen></iframe>
+
+  </div>
+
+  <h3>📄 Télécharger le mémoire (PDF)</h3>
+  <a href="mon-memoire-portfolio.pdf" download class="download-button">📥 Télécharger le mémoire</a>
+</div>
+
+
+      <div id="projet2" class="projet-content hidden">
+  <h2>Projet 2 - Jeux Répliques Multiplateformes</h2>
+
+  <p>Ce projet regroupe plusieurs mini-jeux emblématiques recréés par moi-même à des fins éducatives et de démonstration technique. Chaque version cible une plateforme spécifique : WebGL, Android et PC. L’objectif est de prouver ma capacité à développer pour différents supports tout en respectant les contraintes techniques de chacun.</p>
+
+  <h3>Version WebGL - Dino Run</h3>
+  <p>Une réplique du célèbre jeu Dino de Chrome, jouable en ligne. Conçu avec Unity WebGL, il propose une expérience fluide sur navigateur, avec un gameplay simple mais addictif.</p>
+  <a href="https://miarintsoafanampynirinah.itch.io/dino-run" target="_blank">▶ Tester le jeu en ligne</a>
+  <div class="media">
+    <img src="captures/dino_webgl.png" alt="Capture Dino WebGL" width="300"/>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/ID_VIDEO_DINO" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <h3>Version Android - Flappy Bird & Tic Tac Toe</h3>
+  <p>Deux jeux Android : une réplique fidèle de Flappy Bird et une version revisitée de Tic Tac Toe, avec des effets dynamiques et une grille rotative pour plus de défi. Développés avec Unity, ils sont optimisés pour mobile.</p>
+  <a href="LIEN_TELECHARGEMENT_ANDROID.apk" target="_blank">📱 Télécharger l'APK Android</a>
+  <div class="media">
+    <img src="captures/flappy_android.png" alt="Capture Flappy Android" width="300"/>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/ID_VIDEO_ANDROID" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <h3>Version PC - MTA Distribution Preview</h3>
+  <p>Une preview technique d’un projet de visualisation 3D pour la société MTA Distribution, permettant de découvrir leurs produits à travers une interface interactive. Cette démo met en avant mes compétences en 3D, UI/UX et en packaging de projet desktop.</p>
+  <a href="LIEN_TELECHARGEMENT_PC.zip" target="_blank">🖥 Télécharger la version PC</a>
+  <div class="media">
+    <img src="captures/mta_pc.png" alt="Capture MTA PC" width="300"/>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/ID_VIDEO_PC" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+      <div id="projet3" class="projet-content hidden">
+  <h2>Projet 3 - Bibliothèque d'Assets et de Scripts</h2>
+
+  <p>Ce projet regroupe une série d’assets et de scripts que j’ai développés et organisés pour faciliter la création de projets futurs. On y trouve notamment des modèles 3D, des scripts de gameplay, des tests de fonctionnalités logicielles, ainsi que des éléments utilitaires pour Unity et d’autres moteurs de jeux. Tout est hébergé sur GitHub pour une accessibilité publique et une gestion claire des versions.</p>
+
+  <a href="https://github.com/Miarintsoa-Fanampy-Nirinah/plugin-retopoflow" target="_blank">📁 Voir sur GitHub</a>
+
+  <div class="media">
+    <img src="captures/asset_library.png" alt="Capture Asset Library" width="300"/>
+  </div>
+</div>
+
+
+      <div id="projet4" class="projet-content hidden">
+        <h2>Projet 4 - Site E-commerce</h2>
+        <p>Ce projet est un site e-commerce complet pour une boutique de vêtements. Le site a été développé avec HTML/CSS/JS côté frontend, et PHP/MySQL pour la partie serveur. Il intègre un système de compte client, de panier, de paiement (simulation), et de gestion d’inventaire en back-office.</p>
+        <p>Un tableau de bord admin a été créé pour gérer les produits, les commandes et les utilisateurs. Il utilise AJAX pour rendre les mises à jour dynamiques sans rechargement de page. Des mesures de sécurité comme la validation des inputs, le hashing des mots de passe (bcrypt), et des protections CSRF ont été appliquées.</p>
+        <p>Enfin, le design du site a été pensé pour les utilisateurs sur mobile, avec un système de filtres produits, des animations CSS et une expérience utilisateur fluide, même avec une mauvaise connexion internet.</p>
       </div>
+
     </div>
-  </section>
+  </main>
 
   <footer>
-    <p>Page 01</p>
+    <p>&copy; 2025 Mitriiini Studio</p>
   </footer>
 
   <script src="scriptportfolio.js"></script>
