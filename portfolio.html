@@ -3,13 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
   <title>Mes Projets</title>
   <link rel="stylesheet" href="styleportfolio.css" />
 </head>
 <body>
+  <!-- Barre latérale -->
+  <div class="sidebar">
+    <ul>
+      <div class="sidebar-image-container">
+        <img src="mitriiini_text.png" alt="Image de la barre latérale" class="sidebar-image">
+      </div>
+      <div class="close-btn"><span>&larr;</span></div>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="comingsoon.html">À propos</a></li>
+      <li><a href="comingsoon.html">Projets</a></li>
+      <li><a href="comingsoon.html">Compétences</a></li>
+      <li><a href="comingsoon.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="comingsoon.html">Langues</a></li>
+    </ul>
+  </div>
 
+  <!-- En-tête -->
   <header>
-    <h1>Mes Projets</h1>
+    <div class="left-section">
+      <!-- <img src="mitriiini_text.png" alt="Chroma" class="chroma-logo"> -->
+    </div>
+    <div class="right-section">
+      <div class="hamburger-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
   </header>
 
   <main>
@@ -25,33 +55,13 @@
     <div class="projet-details">
 
       <div id="projet1" class="projet-content">
-  <h2>Projet 1 - Portfolio Académique</h2>
-  <p>Ce projet est un portfolio académique développé dans le cadre de mon parcours en génie logiciel. Il regroupe mes projets réalisés durant ma formation, mes compétences, ainsi qu’un aperçu global de mon évolution dans le domaine du développement logiciel et du design numérique.</p>
-
-  <p>Le site a été conçu avec une approche moderne et responsive. L’interface met en avant la clarté, la fluidité de navigation et la hiérarchie visuelle. Le portfolio comprend plusieurs sections : présentation personnelle, expériences, projets détaillés, compétences techniques et contact.</p>
-
-  <h3>🔧 Compétences acquises</h3>
+  <h2>Développement de Jeux Vidéo</h2>
   <ul>
-    <li>Conception d'interfaces web (HTML5, CSS3, JavaScript)</li>
-    <li>Responsive Design et Accessibilité</li>
-    <li>Optimisation SEO de base</li>
-    <li>Intégration PWA (Progressive Web App)</li>
-    <li>Versionnage de code (Git / GitHub)</li>
-    <li>Structuration d'un projet académique web</li>
+    <li>Projet académique de jeu vidéo 100% malgache, créé entièrement en solo.
+Personnages, environnements et éléments culturels inspirés de Madagascar, développés de A à Z</li>
   </ul>
-
-  <h3>📦 Logiciels et technologies utilisées</h3>
-  <ul>
-    <li>Visual Studio Code</li>
-    <li>Figma (pour les maquettes UI/UX)</li>
-    <li>Google Chrome DevTools</li>
-    <li>Git & GitHub</li>
-    <li>HTML, CSS, JavaScript (vanilla)</li>
-  </ul>
-
-  <h3>🎥 Vidéo de démonstration</h3>
   <div style="margin: 20px 0;">
-   <iframe width="100%" height="315" src="https://www.youtube.com/embed/qC5KtatMcUw" title="Vidéo portfolio académique" frameborder="0" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/Krl4Zu2Cwik?si=jJEtqjIRGLBEnqHt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   </div>
 
@@ -63,10 +73,10 @@
       <div id="projet2" class="projet-content hidden">
   <h2>Projet 2 - Jeux Répliques Multiplateformes</h2>
 
-  <p>Ce projet regroupe plusieurs mini-jeux emblématiques recréés par moi-même à des fins éducatives et de démonstration technique. Chaque version cible une plateforme spécifique : WebGL, Android et PC. L’objectif est de prouver ma capacité à développer pour différents supports tout en respectant les contraintes techniques de chacun.</p>
+  <p>Ce projet.</p>
 
   <h3>Version WebGL - Dino Run</h3>
-  <p>Une réplique du célèbre jeu Dino de Chrome, jouable en ligne. Conçu avec Unity WebGL, il propose une expérience fluide sur navigateur, avec un gameplay simple mais addictif.</p>
+  <p>Une réplique .</p>
   <a href="https://miarintsoafanampynirinah.itch.io/dino-run" target="_blank">▶ Tester le jeu en ligne</a>
   <div class="media">
     <img src="captures/dino_webgl.png" alt="Capture Dino WebGL" width="300"/>
@@ -74,7 +84,7 @@
   </div>
 
   <h3>Version Android - Flappy Bird & Tic Tac Toe</h3>
-  <p>Deux jeux Android : une réplique fidèle de Flappy Bird et une version revisitée de Tic Tac Toe, avec des effets dynamiques et une grille rotative pour plus de défi. Développés avec Unity, ils sont optimisés pour mobile.</p>
+  <p>Deux jeux Android :.</p>
   <a href="LIEN_TELECHARGEMENT_ANDROID.apk" target="_blank">📱 Télécharger l'APK Android</a>
   <div class="media">
     <img src="captures/flappy_android.png" alt="Capture Flappy Android" width="300"/>
@@ -82,7 +92,6 @@
   </div>
 
   <h3>Version PC - MTA Distribution Preview</h3>
-  <p>Une preview technique d’un projet de visualisation 3D pour la société MTA Distribution, permettant de découvrir leurs produits à travers une interface interactive. Cette démo met en avant mes compétences en 3D, UI/UX et en packaging de projet desktop.</p>
   <a href="LIEN_TELECHARGEMENT_PC.zip" target="_blank">🖥 Télécharger la version PC</a>
   <div class="media">
     <img src="captures/mta_pc.png" alt="Capture MTA PC" width="300"/>
@@ -94,7 +103,7 @@
       <div id="projet3" class="projet-content hidden">
   <h2>Projet 3 - Bibliothèque d'Assets et de Scripts</h2>
 
-  <p>Ce projet regroupe une série d’assets et de scripts que j’ai développés et organisés pour faciliter la création de projets futurs. On y trouve notamment des modèles 3D, des scripts de gameplay, des tests de fonctionnalités logicielles, ainsi que des éléments utilitaires pour Unity et d’autres moteurs de jeux. Tout est hébergé sur GitHub pour une accessibilité publique et une gestion claire des versions.</p>
+  <p>Ce projet </p>
 
   <a href="https://github.com/Miarintsoa-Fanampy-Nirinah/plugin-retopoflow" target="_blank">📁 Voir sur GitHub</a>
 
@@ -106,18 +115,44 @@
 
       <div id="projet4" class="projet-content hidden">
         <h2>Projet 4 - Site E-commerce</h2>
-        <p>Ce projet est un site e-commerce complet pour une boutique de vêtements. Le site a été développé avec HTML/CSS/JS côté frontend, et PHP/MySQL pour la partie serveur. Il intègre un système de compte client, de panier, de paiement (simulation), et de gestion d’inventaire en back-office.</p>
-        <p>Un tableau de bord admin a été créé pour gérer les produits, les commandes et les utilisateurs. Il utilise AJAX pour rendre les mises à jour dynamiques sans rechargement de page. Des mesures de sécurité comme la validation des inputs, le hashing des mots de passe (bcrypt), et des protections CSRF ont été appliquées.</p>
-        <p>Enfin, le design du site a été pensé pour les utilisateurs sur mobile, avec un système de filtres produits, des animations CSS et une expérience utilisateur fluide, même avec une mauvaise connexion internet.</p>
+        <p>Ce projet.</p>
       </div>
 
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Mitriiini Studio</p>
+    <p class="copyright">&copy; 2025 Mitriiini-Studio. Tous droits réservés.</p>
+    <div class="footer-links">
+      <a href="terms.html">Conditions d'utilisation</a> | 
+      <a href="privacy.html">Politique de confidentialité</a>
+    </div>
+
+    <!-- Bouton de basculement de thème -->
+    <div class="toggle-theme">
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
   </footer>
 
   <script src="scriptportfolio.js"></script>
+  
+  <script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.addEventListener('keydown', function (event) {
+    if (
+        event.keyCode === 123 || // F12
+        (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
+        (event.ctrlKey && event.keyCode === 85) || // Ctrl+U
+        (event.ctrlKey && event.keyCode === 83)    // Ctrl+S
+    ) {
+        event.preventDefault();
+    }
+});
+</script>
+ 
 </body>
 </html>
