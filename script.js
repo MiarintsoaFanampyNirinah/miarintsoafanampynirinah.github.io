@@ -10,11 +10,11 @@ const themeToggle = document.getElementById('theme-toggle');
 
 // Fonctionnalité de la barre latérale
 function openSidebar() {
-  sidebar.style.left = '0px';
+  sidebar.style.left = '20px';
 }
 
 function closeSidebar() {
-  sidebar.style.left = '-250px';
+  sidebar.style.left = '-350px';
 }
 
 function closeSidebarOnClickOutside(event) {
@@ -91,4 +91,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Lancer l'effet de frappe
   typeEffect();
+});
+
+
+// Sélectionner l'élément du conteneur
+const container = document.getElementById('container');
+
+// Créer l'image
+const pngImage = document.createElement('img');
+pngImage.src = 'click.png';  // Remplace 'ton_image.png' par ton image PNG
+pngImage.id = 'pngImage';
+container.appendChild(pngImage);
+
+// Ajouter un événement au clic sur toute la page
+document.addEventListener('click', (event) => {
+    const x = event.clientX;
+    const y = event.clientY;
+
+    // Positionner l'image à l'endroit du clic
+    pngImage.style.left = `${x - pngImage.width / 2}px`; // Centrer l'image sur le clic
+    pngImage.style.top = `${y - pngImage.height / 2}px`;
+
+    // Afficher l'image avec une opacité de 1
+    pngImage.style.display = 'block';
+    pngImage.style.opacity = 1;
+
+    // Faire disparaître l'image après 0,3 seconde
+    setTimeout(() => {
+        pngImage.style.opacity = 0;
+    }, 0); // Initialisation immédiate du fade
+
+    // Cacher l'image après 0,3 seconde
+    setTimeout(() => {
+        pngImage.style.display = 'none';
+    }, 300); // 0,3 seconde après le fade
 });
