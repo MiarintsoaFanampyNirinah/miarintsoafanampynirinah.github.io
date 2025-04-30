@@ -1,58 +1,107 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Visualiseur 3D - 3D.glb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Portfolio</title>
+
+  <!-- Liens externes pour les polices et les ressources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+      <link rel="stylesheet" href="sync.css">
+  <link rel="icon" href="icon.png" type="image/png">
 </head>
+
 <body>
-  <div id="container"></div>
+<div id="overlay"></div>
+  <div id="container">
+    <!-- Barre latérale -->
+    <div class="sidebar">
+      <ul>
+        <div class="sidebar-image-container">
+          <img src="mitriiini_text.png" alt="Image de la barre latérale" class="sidebar-image">
+        </div>
+        <div class="close-btn"><img src="close.png" alt="Back"></div>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="login.html">Projets</a></li>
+        <li><a href="security.html">Portfolio</a></li>
+        <li><a href="comingsoon.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">À propos</a></li>
+      </ul>
+    </div>
 
-  <script>
-    const container = document.getElementById('container');
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    container.appendChild(renderer.domElement);
+    <!-- En-tête -->
+    <header>
+      <div class="left-section">
+        <!-- Logo ou image du logo, si nécessaire -->
+      </div>
+      <div class="right-section">
+        <div class="hamburger-menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </header>
 
-    // Contrôles souris (rotation, zoom, déplacement)
-    const controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
+    <!-- Corps principal -->
+    <main class="content">
+      <div class="left-side">
+        <img src="miarintsoaprofilpicture.jpg" alt="Votre image" class="profile-image">
+      </div>
 
-    // Lumière ambiante
-    const light = new THREE.AmbientLight(0xffffff, 1);
-    scene.add(light);
+      <div class="right-side">
+        <h1>MIARINTSOA</h1> 
+        <h1>FANAMPY</h1> 
+        <h1>NIRINAH</h1>  
 
-    // Charger le modèle 3D .glb
-    const loader = new THREE.GLTFLoader();
-    loader.load('3D.glb', function (gltf) {
-      scene.add(gltf.scene);
-    }, undefined, function (error) {
-      console.error('Erreur de chargement du modèle :', error);
-    });
+        <p>Bienvenue sur ma page. Je suis Miarintsoa, un développeur passionné et un créateur polyvalent.</p>
+        <p>De <span id="changing-text" data-words="développement de jeux, développement web, création d'applications, programmation de base, production musicale, projets 3D, et bien plus encore ... "></span><span class="cursor"></span></p>
+        <p>Chaque projet que je crée témoigne de mon engagement envers l'innovation et l'excellence.</p>
+        <p>Explorez mon portfolio, découvrez mes expériences et mes idées, et entrez dans un univers riche en créativité. <br>Faites un pas dans mon monde et trouvez de l'inspiration dans chaque création.</p>
+      </div>
+    </main>
 
-    // Position initiale de la caméra
-    camera.position.set(0, 1, 3);
+    <!-- Pied de page -->
+    <footer>
+      <p class="copyright">&copy; 2025 Mitriiini-Studio. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="terms.html">Conditions d'utilisation</a> | 
+        <a href="privacy.html">Politique de confidentialité</a>
+      </div>
 
-    // Ajustement lors du redimensionnement de la fenêtre
-    window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    });
+      <!-- Bouton de basculement de thème -->
+      <div class="toggle-theme">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </footer>
+    
+    <script src="script.js"></script>
 
-    // Boucle d'animation
-    function animate() {
-      requestAnimationFrame(animate);
-      controls.update();
-      renderer.render(scene, camera);
-    }
+<script src="sync.js" defer></script>
+    <script>
+      // Désactive le menu contextuel
+      document.addEventListener('contextmenu', event => event.preventDefault());
 
-    animate();
-  </script>
+      // Désactive les raccourcis clavier pour la protection du contenu
+      document.addEventListener('keydown', function (event) {
+        if (
+          event.keyCode === 123 || // F12
+          (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
+          (event.ctrlKey && event.keyCode === 85) || // Ctrl+U
+          (event.ctrlKey && event.keyCode === 83)    // Ctrl+S
+        ) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </div>
+
 </body>
 </html>
