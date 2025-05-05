@@ -8,35 +8,95 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylecontact.css">
+    <link rel="stylesheet" href="sync.css">
+
 </head>
 <body>
+ <div id="overlay"></div>
+  <div id="container">
+    <!-- Barre latérale -->
+    <div class="sidebar">
+      <ul>
+        <div class="sidebar-image-container">
+          <img src="mitriiini_text.png" alt="Image de la barre latérale" class="sidebar-image">
+        </div>
+        <div class="close-btn"><img src="close.png" alt="Back"></div>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="login.html">Projets</a></li>
+        <li><a href="security.html">Portfolio</a></li>
+        <li><a href="comingsoon.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">À propos</a></li>
+      </ul>
+    </div>
+
+    <!-- En-tête -->
+    <header>
+      <div class="left-section">
+        <!-- Logo ou image du logo, si nécessaire -->
+      </div>
+      <div class="right-section">
+        <div class="hamburger-menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </header>
+
+
+    <main class="content">
   <section class="main-section">
     <div class="left-section">
       <h1>MIARINTSOA FANAMPY NIRINAH</h1>
-      <h2>Mes contacts</h2>
-      <p>Téléphone : <a href="tel:+261123456789" style="color:#fff;">+261 12 345 6789</a></p>
-      <p>Email : <a href="mailto:example@email.com" style="color:#fff;">example@email.com</a></p>
-      <div class="social-icons">
-        <a href="https://www.instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
-      </div>
+      <p>Téléphone : <a href="tel:+261384225618" >+261 38 42 256 18</a></p>
+      <p>Email : <a href="mailto:example@email.com">23l04l03@gmail.com</a></p>
+        <h1>LOT 2 E 51DbisBF Ampanotokana</h1>
       <div class="map-container">
         <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d599.2675889804442!2d47.55707896452979!3d-18.89742624681455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDUzJzUwLjkiUyA0N8KwMzMnMjYuMyJF!5e1!3m2!1sfr!2smg!4v1745692167695!5m2!1sfr!2smg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
-
-    <div class="right-section">
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="comingsoon.html">À propos</a></li>
-        <li><a href="comingsoon.html">Projets</a></li>
-        <li><a href="comingsoon.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="security.html">Portfolio</a></li>
-      </ul>
-    </div>
   </section>
+ </main>
 
-  <script src="scriptcontact.js"></script>
-  <script src="scriptsecurejs.js"></script>
+<!-- Pied de page -->
+    <footer>
+      <p class="copyright">&copy; 2025 Mitriiini-Studio. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="terms.html">Conditions d'utilisation</a> | 
+        <a href="privacy.html">Politique de confidentialité</a>
+      </div>
+
+      <!-- Bouton de basculement de thème -->
+      <div class="toggle-theme">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </footer>
+    
+    <script src="scriptcontact.js"></script>
+
+<script src="sync.js" defer></script>
+    <script>
+      // Désactive le menu contextuel
+      document.addEventListener('contextmenu', event => event.preventDefault());
+
+      // Désactive les raccourcis clavier pour la protection du contenu
+      document.addEventListener('keydown', function (event) {
+        if (
+          event.keyCode === 123 || // F12
+          (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
+          (event.ctrlKey && event.keyCode === 85) || // Ctrl+U
+          (event.ctrlKey && event.keyCode === 83)    // Ctrl+S
+        ) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </div>
+
+
 </body>
 </html>
