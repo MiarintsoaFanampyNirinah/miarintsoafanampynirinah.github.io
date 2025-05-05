@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+           <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Accès Sécurisé</title>
+    <link rel="stylesheet" href="stylesecurity.css">
+</head>
+<body>
+    <div id="homeBtn">
+        <button onclick="window.location.href='index.html'">
+            <img src="home.png" alt="Accueil">
+        </button>
+    </div>
+
+    <div class="container">
+        <h1>Accès sécurisé</h1>
+        <input type="password" id="passwordInput" placeholder="Entrez le code de sécurité">
+        <button id="submitBtn">Valider</button>
+    </div>
+
+    <p id="message"></p>
+
+    <script src="scriptsecurity.js"></script>
+
+    <script>
+      // Désactive le menu contextuel
+      document.addEventListener('contextmenu', event => event.preventDefault());
+
+      // Désactive les raccourcis clavier pour la protection du contenu
+      document.addEventListener('keydown', function (event) {
+        if (
+          event.keyCode === 123 || // F12
+          (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
+          (event.ctrlKey && event.keyCode === 85) || // Ctrl+U
+          (event.ctrlKey && event.keyCode === 83)    // Ctrl+S
+        ) {
+          event.preventDefault();
+        }
+      });
+    </script>
+</body>
+</html>

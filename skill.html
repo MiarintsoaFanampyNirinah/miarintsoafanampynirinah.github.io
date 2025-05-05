@@ -1,33 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Story</title>
-  <link rel="stylesheet" href="styleskill.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Compétences</title>
+    <link rel="stylesheet" href="styleskill.css"> <!-- Vérifie bien le nom -->
 </head>
 <body>
-  <!-- Main Section -->
-  <section class="main-section">
-    <div class="left-section">
-      <h1>Our Story</h1>
-      <p>Read the story of four girls who have carved out their space in the world.</p>
-      <a href="story.html" class="read-story-btn">READ THE FULL STORY</a>
-      <div class="social-icons">
-        <a href="https://www.facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
-        <a href="https://www.twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
-      </div>
-      <div class="footer-links">
-        <a href="faq.html">FAQ</a>
-        <a href="help.html">Help</a>
-      </div>
-    </div>
-    <div class="right-section">
-      <img src="person-image.jpg" alt="Person Image">
-    </div>
-  </section>
+    <header>
+        <h1 class="glow-title">Mes Compétences</h1>
+    </header>
 
-  <script src="scriptskill.js"></script>
+    <main>
+        <div class="container">
+            <!-- Colonne gauche -->
+            <section class="left">
+                <h2 class="glow-title">Langages de programmation</h2>
+                <ul>
+                    <li>C-Sharp</li>
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>Kotlin</li>
+                    <li>Python</li>
+                    <li>Javascript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>XML</li>
+                </ul>
+                <h2 class="glow-title">Moteurs de jeu</h2>
+                <ul>
+                    <li>Unity (2D, 3D, Mobile, WebGL)</li>
+                    <li>Unreal Engine</li>
+                    <li>Godot Engine</li>
+                </ul>
+                <h2 class="glow-title">Framework & Bibliothèques</h2>
+                <ul>
+                    <li>Fish Networking</li>
+                    <li>ML Agents</li>
+                    <li>Android SDK</li>
+                </ul>
+                <h2 class="glow-title">Développement Web</h2>
+                <ul>
+                    <li>Frontend: HTML, CSS, JavaScript</li>
+                    <li>Backend: PHP, Node.js</li>
+                    <li>CMS: WordPress, NextPage</li>
+                </ul>
+                <h2 class="glow-title">Modélisation 3D</h2>
+                <ul>
+                    <li>Blender</li>
+                    <li>Character Creator</li>
+                    <li>UV Mapping</li>
+                    <li>Texturing</li>
+                </ul>
+                <h2 class="glow-title">Texturing & Design</h2>
+                <ul>
+                    <li>Photoshop</li>
+                    <li>Figma</li>
+                    <li>Création de texture</li>
+                </ul>
+                <h2 class="glow-title">Animation</h2>
+                <ul>
+                    <li>Mixamo</li>
+                    <li>Blender Animation</li>
+                </ul>
+                <h2 class="glow-title">Intelligence Artificielle</h2>
+                <ul>
+                    <li>ML Agents</li>
+                    <li>Unity</li>
+                    <li>Concept Machine Learning</li>
+                    <li>GitHub</li>
+                </ul>
+            </section>
+
+            <!-- Colonne milieu -->
+            <section class="middle">
+                <h2 class="glow-title">Niveaux de compétence</h2>
+                <div class="progress-bar" data-skill="C-Sharp"></div>
+                <div class="progress-bar" data-skill="C++"></div>
+                <div class="progress-bar" data-skill="Java"></div>
+                <div class="progress-bar" data-skill="Kotlin"></div>
+                <div class="progress-bar" data-skill="Python"></div>
+                <div class="progress-bar" data-skill="Javascript"></div>
+                <div class="progress-bar" data-skill="HTML"></div>
+                <div class="progress-bar" data-skill="CSS"></div>
+                <div class="progress-bar" data-skill="XML"></div>
+                <div class="progress-bar" data-skill="Unity"></div>
+                <div class="progress-bar" data-skill="Unreal Engine"></div>
+                <div class="progress-bar" data-skill="Godot Engine"></div>
+                <div class="progress-bar" data-skill="Fish Networking"></div>
+                <div class="progress-bar" data-skill="ML Agents"></div>
+                <div class="progress-bar" data-skill="Android SDK"></div>
+                <div class="progress-bar" data-skill="PHP"></div>
+                <div class="progress-bar" data-skill="Node.js"></div>
+                <div class="progress-bar" data-skill="WordPress"></div>
+                <div class="progress-bar" data-skill="NextPage"></div>
+                <div class="progress-bar" data-skill="Blender"></div>
+                <div class="progress-bar" data-skill="Character Creator"></div>
+                <div class="progress-bar" data-skill="UV Mapping"></div>
+                <div class="progress-bar" data-skill="Texturing"></div>
+                <div class="progress-bar" data-skill="Photoshop"></div>
+                <div class="progress-bar" data-skill="Figma"></div>
+                <div class="progress-bar" data-skill="Création de texture"></div>
+                <div class="progress-bar" data-skill="Mixamo"></div>
+                <div class="progress-bar" data-skill="Blender Animation"></div>
+                <div class="progress-bar" data-skill="Concept Machine Learning"></div>
+                <div class="progress-bar" data-skill="GitHub"></div>
+            </section>
+
+            <!-- Colonne droite -->
+            <section class="right">
+                <div class="gif-container top">
+                    <img src="code.gif" alt="AI gif" style="width: 250px; height: auto;">
+                </div>
+                <div class="gif-container bottom">
+                    <img src="3D.gif" alt="3D gif">
+                </div>
+            </section>
+        </div>
+
+        <!-- Logiciels maîtrisés -->
+        <section class="software-mastered">
+            <h2 class="glow-title">Logiciels maîtrisés</h2>
+            <div class="software-rectangle">
+                <img src="Software.png" alt="Logiciels maîtrisés">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mitriiini Studio. Tous droits réservés.</p>
+    </footer>
+
+    <script src="styleportfolio.js"></script> <!-- Vérifie le nom du bon fichier JS ici -->
 </body>
 </html>
