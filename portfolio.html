@@ -3,36 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
   <title>Mes Projets</title>
   <link rel="stylesheet" href="styleportfolio.css" />
 </head>
-<body>
-  <!-- Barre latérale -->
-  <div class="sidebar">
-    <ul>
-      <div class="sidebar-image-container">
-        <img src="mitriiini_text.png" alt="Image de la barre latérale" class="sidebar-image">
-      </div>
-      <div class="close-btn"><span>&larr;</span></div>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="comingsoon.html">À propos</a></li>
-      <li><a href="comingsoon.html">Projets</a></li>
-      <li><a href="comingsoon.html">Compétences</a></li>
-      <li><a href="comingsoon.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="comingsoon.html">Langues</a></li>
-    </ul>
-  </div>
+<meta name="viewport" content="width=1024">
 
-  <!-- En-tête -->
-  <header>
-    <div class="left-section">
-      <!-- <img src="mitriiini_text.png" alt="Chroma" class="chroma-logo"> -->
+<body>
+<div id="overlay"></div>
+  <div id="container">
+    <!-- Barre latérale -->
+    <div class="sidebar">
+      <ul>
+        <div class="sidebar-image-container">
+          <img src="mitriiini_text.png" alt="Image de la barre latérale" class="sidebar-image">
+        </div>
+        <div class="close-btn"><img src="close.png" alt="Back"></div>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="login.html">Projets</a></li>
+        <li><a href="security.html">Portfolio</a></li>
+        <li><a href="comingsoon.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">À propos</a></li>
+      </ul>
     </div>
+
+  <!-- Header -->
+  <header>
+    <div class="left-section"></div>
     <div class="right-section">
       <div class="hamburger-menu">
         <div class="line"></div>
@@ -45,114 +45,409 @@
   <main>
     <div class="projets-list">
       <ul>
-        <li onclick="afficherProjet('projet1')">Projet 1</li>
-        <li onclick="afficherProjet('projet2')">Projet 2</li>
-        <li onclick="afficherProjet('projet3')">Projet 3</li>
-        <li onclick="afficherProjet('projet4')">Projet 4</li>
+        <li onclick="afficherProjet('projet1')">Jeux AAA</li>
+        <li onclick="afficherProjet('projet2')">Mini Jeux</li>
+        <li onclick="afficherProjet('projet3')">Bibliothèque d'Assets</li>
+        <li onclick="afficherProjet('projet4')">Cinématique</li>
+        <li onclick="afficherProjet('projet5')">Design Graphique</li>
+        <li onclick="afficherProjet('projet6')">Compétences</li>
       </ul>
     </div>
 
     <div class="projet-details">
 
-      <div id="projet1" class="projet-content">
-  <h2>Développement de Jeux Vidéo</h2>
-  <ul>
-    <li>Projet académique de jeu vidéo 100% malgache, créé entièrement en solo.
-Personnages, environnements et éléments culturels inspirés de Madagascar, développés de A à Z</li>
-  </ul>
-  <div style="margin: 20px 0;">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/Krl4Zu2Cwik?si=jJEtqjIRGLBEnqHt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <!-- Projet 1 -->
+<div id="projet1" class="projet-content">
+  <div class="project-container">
+    <!-- Bloc logo + titre + plateforme -->
+    <div class="header-block">
+      <img src="aiza.png" alt="Logo Aiza" class="aiza-img-mini">
+      <div class="header-text">
+        <h2>Aiza</h2>
+        <p>Windows</p>
+      </div>
+    </div>
 
-  </div>
+    <!-- Infos projet -->
+    <div class="project-text">
+      <p>Genre : Aventure narrative</p>
+      <p>Description : Un jeu malgache inspiré de la culture locale, offrant une aventure immersive avec des choix narratifs et des énigmes.</p>
+      <p>Moteur : Unity Engine</p>
+      <p>Poids : 1.34 Go</p>
+      <p>Statut : Terminé</p>
+      <a href="Aiza GDD.pdf" download class="download-button">Télécharger le GDD (Game Design Document)</a>
+    </div>
 
-  <h3>📄 Télécharger le mémoire (PDF)</h3>
-  <a href="mon-memoire-portfolio.pdf" download class="download-button">📥 Télécharger le mémoire</a>
-</div>
-
-
-      <div id="projet2" class="projet-content hidden">
-  <h2>Projet 2 - Jeux Répliques Multiplateformes</h2>
-
-  <p>Ce projet.</p>
-
-  <h3>Version WebGL - Dino Run</h3>
-  <p>Une réplique .</p>
-  <a href="https://miarintsoafanampynirinah.itch.io/dino-run" target="_blank">▶ Tester le jeu en ligne</a>
-  <div class="media">
-    <img src="captures/dino_webgl.png" alt="Capture Dino WebGL" width="300"/>
-    <iframe width="300" height="170" src="https://www.youtube.com/embed/ID_VIDEO_DINO" frameborder="0" allowfullscreen></iframe>
-  </div>
-
-  <h3>Version Android - Flappy Bird & Tic Tac Toe</h3>
-  <p>Deux jeux Android :.</p>
-  <a href="LIEN_TELECHARGEMENT_ANDROID.apk" target="_blank">📱 Télécharger l'APK Android</a>
-  <div class="media">
-    <img src="captures/flappy_android.png" alt="Capture Flappy Android" width="300"/>
-    <iframe width="300" height="170" src="https://www.youtube.com/embed/ID_VIDEO_ANDROID" frameborder="0" allowfullscreen></iframe>
-  </div>
-
-  <h3>Version PC - MTA Distribution Preview</h3>
-  <a href="LIEN_TELECHARGEMENT_PC.zip" target="_blank">🖥 Télécharger la version PC</a>
-  <div class="media">
-    <img src="captures/mta_pc.png" alt="Capture MTA PC" width="300"/>
-    <iframe width="300" height="170" src="https://www.youtube.com/embed/ID_VIDEO_PC" frameborder="0" allowfullscreen></iframe>
+    <!-- Vidéo -->
+    <div class="project-media">
+      <video id="aiza-video" autoplay muted controls playsinline disablepictureinpicture controlsList="nodownload nofullscreen">
+        <source src="aiza.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+    </div>
   </div>
 </div>
 
+      <!-- Projet 2 -->
+<div id="projet2" class="projet-content hidden">
+  <div class="project-container">
 
-      <div id="projet3" class="projet-content hidden">
-  <h2>Projet 3 - Bibliothèque d'Assets et de Scripts</h2>
-
-  <p>Ce projet </p>
-
-  <a href="https://github.com/Miarintsoa-Fanampy-Nirinah/plugin-retopoflow" target="_blank">📁 Voir sur GitHub</a>
-
-  <div class="media">
-    <img src="captures/asset_library.png" alt="Capture Asset Library" width="300"/>
-  </div>
-</div>
-
-
-      <div id="projet4" class="projet-content hidden">
-        <h2>Projet 4 - Site E-commerce</h2>
-        <p>Ce projet.</p>
+    <!-- DINO RUN -->
+    <div class="project-block">
+      <div class="header-block">
+        <img src="dino.png" alt="Dino Icon" class="game-icon">
+        <div class="header-text">
+          <h2>Dino Run</h2>
+          <p>WebGL</p>
+        </div>
       </div>
 
+      <div class="project-info">
+        <p>Genre : Arcade / Runner</p>
+        <p>Description : Réplique du célèbre jeu Dino Run jouable directement sur navigateur.</p>
+        <p>Fonctionnalités :</p>
+        <ul>
+          <li>Jeu rapide et fluide</li>
+          <li>Accessible sans installation</li>
+          <li>Compatible mobile et PC</li>
+        </ul>
+        <p>Moteur : Unity WebGL</p>
+        <p>Statut : Terminé</p>
+        <a href="https://miarintsoafanampynirinah.itch.io/dino-run" target="_blank" class="project-link">▶ Tester le jeu</a>
+      </div>
+
+      <img src="dino.gif" alt="Dino Run GIF" class="game-gif">
     </div>
+
+    <!-- FLAPPY BIRD -->
+    <div class="project-block">
+      <div class="header-block">
+        <img src="flappybird.png" alt="Flappy Icon" class="game-icon">
+        <div class="header-text">
+          <h2>Flappy Bird</h2>
+          <p>Android</p>
+        </div>
+      </div>
+
+      <div class="project-info">
+        <p>Genre : Arcade</p>
+        <p>Description : Une version mobile de Flappy Bird.</p>
+        <p>Fonctionnalités :</p>
+        <ul>
+          <li>Gameplay simple et addictif</li>
+        </ul>
+        <p>Moteur : Unity</p>
+        <p>Poids : 18 Mo</p>
+        <p>Statut : Terminé</p>
+        <a href="https://itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com/upload2/game/3283583/12644226?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3edfcce40115d057d0b5606758e7e9ee%2F20250502%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250502T064002Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=bddcaf9f7fcbaaa07309ed2711cb47ede60ab22ad2eb6d644f4f5dc28fbedcd6" target="_blank" class="project-link">📱 Télécharger APK</a>
+      </div>
+
+      <img src="flappybird.gif" alt="Flappy Bird GIF" class="game-gif">
+    </div>
+
+    <!-- TIC TAC TOE -->
+    <div class="project-block">
+      <div class="header-block">
+        <img src="tictactoe.png" alt="Tic Tac Toe Icon" class="game-icon">
+        <div class="header-text">
+          <h2>Tic Tac Toe</h2>
+          <p>Android</p>
+        </div>
+      </div>
+
+      <div class="project-info">
+        <p>Genre : Puzzle / Stratégie</p>
+        <p>Description : Jeu de morpion simple et propre, en solo ou contre un ami.</p>
+        <p>Fonctionnalités :</p>
+        <ul>
+          <li>2 joueur ou contre IA</li>
+          <li>Interface intuitive</li>
+        </ul>
+        <p>Moteur : Unity</p>
+        <p>Poids : 15 Mo</p>
+        <p>Statut : Terminé</p>
+        <a href="https://itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com/upload2/game/3285058/12650660?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3edfcce40115d057d0b5606758e7e9ee%2F20250502%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250502T064149Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=b872a04c7c268dd0aeb8872d901e2dd95d9bdc9e022cb5c179f9c6cb2ce92d30" target="_blank" class="project-link">Télécharger</a>
+      </div>
+
+      <img src="tictactoe.gif" alt="Tic Tac Toe GIF" class="game-gif">
+    </div>
+
+    <!-- MTA PC -->
+    <div class="project-block">
+      <div class="header-block">
+        <img src="mta.png" alt="MTA Icon" class="game-icon">
+        <div class="header-text">
+          <h2>MTA Distribution</h2>
+          <p>PC</p>
+        </div>
+      </div>
+
+      <div class="project-info">
+        <p>Genre : Simulation</p>
+        <p>Description : Une réplique interieur d'une maison</p>
+        <p>Fonctionnalités :</p>
+        <ul>
+          <li>Expérience premiere personne</li>
+        </ul>
+        <p>Moteur : Unity</p>
+        <p>Poids : 47 Mo</p>
+        <p>Statut : Prototype</p>
+        <a href="https://itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com/upload2/game/3311931/13559720?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3edfcce40115d057d0b5606758e7e9ee%2F20250502%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250502T065516Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=9d0008cddf7ccfcc33a945c9273a4dfb7453a554a213da015ff0b8b95b248d32" target="_blank" class="project-link">Télécharger</a>
+      </div>
+
+      <img src="mta.gif" alt="MTA PC GIF" class="game-gif">
+    </div>
+
+  </div>
+</div>
+
+
+      <!-- Projet 3 -->
+<div id="projet3" class="projet-content hidden">
+  <div class="project-container">
+    <div class="project-text">
+      <h2>Bibliothèque d'Assets & Scripts</h2>
+      <p>
+        Mon compte GitHub regroupe une bibliothèque organisée de ressources techniques destinées à la modélisation 3D et au développement de jeux. Elle contient :
+      </p>
+      <ul>
+        <li><strong>Scripts</strong> : Automatisations, outils de développement, retopologie (ex: plugin RetopoFlow), shaders personnalisés.</li>
+        <li><strong>Prototypes</strong> : Mécaniques de jeu testables, systèmes de caméra, IA simple.</li>
+        <li><strong>Assets 3D</strong> : Modèles low poly et high poly, rigging de personnages, objets interactifs.</li>
+        <li><strong>Textures</strong> : Matériaux PBR, UV unwraps, textures stylisées.</li>
+        <li><strong>Techniques</strong> : Méthodes de travail, scripts Blender/Unity, snippets utiles.</li>
+        <li><strong>Aides & Notes</strong> : Documentations personnelles, explications de concepts, tutoriels courts.</li>
+        <li><strong>Logiciels utilisés</strong> : Unity, Blender, Krita, Substance Painter, GitHub Desktop.</li>
+      </ul>
+      <p>Cette bibliothèque est pensée comme un outil de production rapide et modulaire, utile à tout projet de jeu ou d’animation 3D.</p>
+
+      <a href="https://github.com/Miarintsoa-Fanampy-Nirinah/plugin-retopoflow" target="_blank" class="project-link">📁 Voir sur GitHub</a>
+    </div>
+
+    <div class="project-media">
+      <img src="git.png" alt="Asset Library" />
+    </div>
+  </div>
+</div>
+
+
+<!-- Projet 4 -->
+<div id="projet4" class="projet-content hidden">
+  <div class="projet4-container">
+    
+    <!-- Texte d’introduction -->
+    <div class="projet4-text">
+      <p><em>Une cinématique introspective sur ma vie, racontée à travers un style narratif et visuel personnel.</em></p>
+    </div>
+
+    <!-- Vidéo large -->
+    <div class="projet4-video-large">
+      <video id="story-video" autoplay muted controls playsinline disablepictureinpicture controlsList="nodownload nofullscreen">
+        <source src="story.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- Projet 5 -->
+<div id="projet5" class="projet-content hidden">
+  <h2>Projet 5 : Design Graphique</h2>
+  <div class="gallery-grid">
+    <div class="gallery-card"><img src="1.jpg" alt="Design 1" /></div>
+    <div class="gallery-card"><img src="2.jpg" alt="Design 2" /></div>
+    <div class="gallery-card"><img src="3.jpg" alt="Design 3" /></div>
+    <div class="gallery-card"><img src="4.jpg" alt="Design 4" /></div>
+    <div class="gallery-card"><img src="5.jpg" alt="Design 5" /></div>
+    <div class="gallery-card"><img src="6.jpg" alt="Design 6" /></div>
+    <div class="gallery-card"><img src="7.jpg" alt="Design 7" /></div>
+    <div class="gallery-card"><img src="8.jpg" alt="Design 8" /></div>
+    <div class="gallery-card"><img src="9.jpg" alt="Design 9" /></div>
+  </div>
+</div>
+
+
+
+<!-- Projet 6 : Compétences -->
+<div id="projet6" class="projet-content hidden">
+
+  <div class="competence-container">
+
+    <!-- Compétences à gauche + barre au centre -->
+    <section class="skills-column">
+      <h2 class="glow-title">Compétences techniques</h2>
+      <div class="skill-item">
+        <span>C#</span>
+        <div class="bar" style="--level: 90%"></div>
+      </div>
+      <div class="skill-item">
+        <span>C++</span>
+        <div class="bar" style="--level: 60%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Java</span>
+        <div class="bar" style="--level: 70%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Kotlin</span>
+        <div class="bar" style="--level: 70%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Python</span>
+        <div class="bar" style="--level: 80%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Javascript</span>
+        <div class="bar" style="--level: 90%"></div>
+      </div>
+      <div class="skill-item">
+        <span>HTML</span>
+        <div class="bar" style="--level: 90%"></div>
+      </div>
+      <div class="skill-item">
+        <span>CSS</span>
+        <div class="bar" style="--level: 90%"></div>
+      </div>
+      <div class="skill-item">
+        <span>XML</span>
+        <div class="bar" style="--level: 70%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Unity</span>
+        <div class="bar" style="--level: 90%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Unreal Engine</span>
+        <div class="bar" style="--level: 70%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Godot Engine</span>
+        <div class="bar" style="--level: 70%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Fish Networking</span>
+        <div class="bar" style="--level: 70%"></div>
+      </div>
+      <div class="skill-item">
+        <span>ML Agents</span>
+        <div class="bar" style="--level: 70%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Android SDK</span>
+        <div class="bar" style="--level: 90%"></div>
+      </div>
+      <div class="skill-item">
+        <span>PHP</span>
+        <div class="bar" style="--level: 50%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Node.js</span>
+        <div class="bar" style="--level: 50%"></div>
+      </div>
+      <div class="skill-item">
+        <span>WordPress</span>
+        <div class="bar" style="--level: 70%"></div>
+      </div>
+      <div class="skill-item">
+        <span>NicePage</span>
+        <div class="bar" style="--level: 70%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Blender</span>
+        <div class="bar" style="--level: 90%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Character Creator</span>
+        <div class="bar" style="--level: 90%"></div>
+      </div>
+      <div class="skill-item">
+        <span>UV Mapping</span>
+        <div class="bar" style="--level: 90%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Texturing</span>
+        <div class="bar" style="--level: 90%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Photoshop</span>
+        <div class="bar" style="--level: 90%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Création de texture</span>
+        <div class="bar" style="--level: 90%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Mixamo</span>
+        <div class="bar" style="--level: 90%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Blender Animation</span>
+        <div class="bar" style="--level: 90%"></div>
+      </div>
+      <div class="skill-item">
+        <span>Concept Machine Learning</span>
+        <div class="bar" style="--level: 80%"></div>
+      </div>
+      <div class="skill-item">
+        <span>GitHub</span>
+        <div class="bar" style="--level: 90%"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Logiciels maîtrisés -->
+  <section class="software-mastered">
+    <h2 class="glow-title">Logiciels maîtrisés</h2>
+    <div class="software-rectangle">
+      <img src="Software.png" alt="Logiciels maîtrisés">
+    </div>
+  </section>
+</div>
+
+
   </main>
 
-  <footer>
-    <p class="copyright">&copy; 2025 Mitriiini-Studio. Tous droits réservés.</p>
-    <div class="footer-links">
-      <a href="terms.html">Conditions d'utilisation</a> | 
-      <a href="privacy.html">Politique de confidentialité</a>
-    </div>
+    <!-- Pied de page -->
+    <footer>
+      <p class="copyright">&copy; 2025 Mitriiini-Studio. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="terms.html">Conditions d'utilisation</a> | 
+        <a href="privacy.html">Politique de confidentialité</a>
+      </div>
 
-    <!-- Bouton de basculement de thème -->
-    <div class="toggle-theme">
-      <label class="switch">
-        <input type="checkbox" id="theme-toggle">
-        <span class="slider round"></span>
-      </label>
-    </div>
-  </footer>
+      <!-- Bouton de basculement de thème -->
+      <div class="toggle-theme">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </footer>
 
   <script src="scriptportfolio.js"></script>
-  
-  <script>
-document.addEventListener('contextmenu', event => event.preventDefault());
 
-document.addEventListener('keydown', function (event) {
-    if (
-        event.keyCode === 123 || // F12
-        (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
-        (event.ctrlKey && event.keyCode === 85) || // Ctrl+U
-        (event.ctrlKey && event.keyCode === 83)    // Ctrl+S
-    ) {
-        event.preventDefault();
-    }
-});
-</script>
- 
+<script src="sync.js" defer></script>
+    <script>
+      // Désactive le menu contextuel
+      document.addEventListener('contextmenu', event => event.preventDefault());
+
+      // Désactive les raccourcis clavier pour la protection du contenu
+      document.addEventListener('keydown', function (event) {
+        if (
+          event.keyCode === 123 || // F12
+          (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
+          (event.ctrlKey && event.keyCode === 85) || // Ctrl+U
+          (event.ctrlKey && event.keyCode === 83)    // Ctrl+S
+        ) {
+          event.preventDefault();
+        }
+      });
+    </script>
+
+
+    </div>
 </body>
 </html>
