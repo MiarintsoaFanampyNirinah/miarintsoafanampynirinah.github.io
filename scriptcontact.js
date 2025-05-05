@@ -1,97 +1,128 @@
-/* Global Styles */
-body {
-  margin: 0;
-  font-family: 'Varela Round', serif;
-  background-image: url('loop.gif'); /* Background image */
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  transition: filter 1s ease-in-out; /* Smooth transition for filter */
+// Sélecteurs pour les éléments
+const words = [" développement de jeux ", " programmation ", " musique ", " projets 3D "];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const sidebar = document.querySelector('.sidebar');
+const closeBtn = document.querySelector('.close-btn');
+const themeToggle = document.getElementById('theme-toggle');
+
+// Fonctionnalité de la barre latérale
+function openSidebar() {
+  sidebar.style.left = '20px';
 }
 
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: inherit;
-  background-size: cover;
-  background-position: center;
-  filter: blur(5px); /* Blur effect for background image */
-  z-index: -1;
+function closeSidebar() {
+  sidebar.style.left = '-350px';
 }
 
-/* Main Section */
-.main-section {
-  display: flex;
-  width: 80%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  padding: 20px;
-  border-radius: 2px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px); /* Blur effect for box */
-  position: relative;
-  z-index: 0;
-  flex-direction: column; /* Change to column layout on smaller screens */
-}
-
-/* Media Queries for Responsiveness */
-@media (min-width: 768px) {
-  .main-section {
-    flex-direction: row; /* Change to row layout on larger screens */
+function closeSidebarOnClickOutside(event) {
+  const isClickInside = sidebar.contains(event.target) || hamburgerMenu.contains(event.target);
+  if (!isClickInside) {
+    closeSidebar();
   }
 }
 
-.left-section {
-  flex: 1;
-  padding: 20px;
+// Fonctionnalité du thème
+function setThemeBasedOnTime() {
+  const currentHour = new Date().getHours();
+  const body = document.body;
+
+  if (currentHour >= 5 && currentHour < 17) {
+    body.setAttribute('data-theme', 'light');
+    themeToggle.checked = false;
+  } else {
+    body.setAttribute('data-theme', 'dark');
+    themeToggle.checked = true;
+  }
 }
 
-.left-section h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+function toggleTheme() {
+  const body = document.body;
+  if (themeToggle.checked) {
+    body.setAttribute('data-theme', 'dark');
+  } else {
+    body.setAttribute('data-theme', 'light');
+  }
 }
 
-.left-section h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+// Fonctionnalité de l'effet de frappe
+function typeEffect() {
+  const fullText = words[wordIndex];
+  const displayText = isDeleting 
+      ? fullText.substring(0, charIndex--) 
+      : fullText.substring(0, charIndex++);
+
+  document.getElementById("changing-text").textContent = displayText;
+
+  const typingSpeed = isDeleting ? 100 : 150; // Ajuster la vitesse pour taper et effacer
+
+  if (!isDeleting && charIndex === fullText.length) {
+    isDeleting = true;
+    setTimeout(typeEffect, 1000); // Attendre avant d'effacer
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    wordIndex = (wordIndex + 1) % words.length; // Passer au mot suivant
+    setTimeout(typeEffect, 500); // Attendre avant de taper le mot suivant
+  } else {
+    setTimeout(typeEffect, typingSpeed);
+  }
 }
 
-.social-icons a {
-  margin-right: 10px;
-}
+// Écouteurs d'événements
+document.addEventListener("DOMContentLoaded", () => {
+  // Configuration initiale pour le thème
+  setThemeBasedOnTime();
 
-.social-icons img {
-  width: 32px;
-  height: 32px;
-}
+  // Écouteurs d'événements pour les interactions avec la barre latérale
+  hamburgerMenu.addEventListener('click', openSidebar);
+  closeBtn.addEventListener('click', closeSidebar);
+  document.addEventListener('click', closeSidebarOnClickOutside);
 
-.right-section {
-  flex: 1;
-  padding: 20px;
-}
+  // Écouteurs d'événements pour les liens de la barre latérale
+  const links = document.querySelectorAll('.sidebar ul li a');
+  links.forEach((link) => {
+    link.addEventListener('click', closeSidebar);
+  });
 
-.right-section ul {
-  list-style: none;
-  padding: 0;
-}
+  // Écouteur d'événements pour le basculement de thème
+  themeToggle.addEventListener('change', toggleTheme);
 
-.right-section ul li {
-  margin-bottom: 10px;
-}
+  // Lancer l'effet de frappe
+  typeEffect();
+});
 
-.right-section ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-}
 
-.right-section ul li a:hover {
-  text-decoration: underline;
-}
+// Sélectionner l'élément du conteneur
+const container = document.getElementById('container');
+
+// Créer l'image
+const pngImage = document.createElement('img');
+pngImage.src = 'click.png';  // Remplace 'ton_image.png' par ton image PNG
+pngImage.id = 'pngImage';
+container.appendChild(pngImage);
+
+// Ajouter un événement au clic sur toute la page
+document.addEventListener('click', (event) => {
+    const x = event.clientX;
+    const y = event.clientY;
+
+    // Positionner l'image à l'endroit du clic
+    pngImage.style.left = `${x - pngImage.width / 2}px`; // Centrer l'image sur le clic
+    pngImage.style.top = `${y - pngImage.height / 2}px`;
+
+    // Afficher l'image avec une opacité de 1
+    pngImage.style.display = 'block';
+    pngImage.style.opacity = 1;
+
+    // Faire disparaître l'image après 0,3 seconde
+    setTimeout(() => {
+        pngImage.style.opacity = 0;
+    }, 0); // Initialisation immédiate du fade
+
+    // Cacher l'image après 0,3 seconde
+    setTimeout(() => {
+        pngImage.style.display = 'none';
+    }, 300); // 0,3 seconde après le fade
+});
