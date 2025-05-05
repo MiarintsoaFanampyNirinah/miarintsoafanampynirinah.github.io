@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accès Admin / Équipe</title>
+  <link rel="stylesheet" href="stylelogin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="blocked-screen" class="hidden">
+  <h1>Accès bloqué</h1>
+  <p>Réessayez dans <span id="countdown">00:00:10</span></p>
+</div>
+
+<div class="container" id="main-container">
+  <div class="card" id="card">
+    <div class="front">
+      <button onclick="flipCard('admin')">Admin</button>
+      <button onclick="flipCard('team')">Équipe</button>
+    </div>
+    <div class="back" id="back-content">
+      <!-- Injecté par JS -->
+    </div>
+    <!-- Icône d'aide en haut à droite -->
+    <img src="help.png" alt="Help" class="help-icon" onmouseover="showTooltip()" onmouseout="hideTooltip()" onclick="showHelp()">
+    <div class="tooltip" id="tooltip">Besoin d'aide ?</div>
+  </div>
+</div>
+
+<div id="help-panel" class="help-panel hidden">
+  <h2>Support Mitrrini Studio</h2>
+  <ul>
+    <li>Problème de connexion</li>
+    <li>Mot de passe incorrect</li>
+    <li>Mot de passe oublié</li>
+    <li>Contactez Mitrrini Studio</li>
+  </ul>
+  <button onclick="closeHelp()">Fermer</button>
+</div>
+
+<script src="scriptlogin.js"></script>
+</body>
+</html>
