@@ -1,4 +1,4 @@
-* {
+* { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    padding: 0 0.5rem; /* Réduction de l'espace global */
+    padding: 0 0.5rem;
 }
 
 header {
@@ -18,6 +18,21 @@ header {
     color: #fff;
     padding: 1.5rem 1rem;
     text-align: center;
+    position: relative;
+}
+
+.home-button {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+}
+
+.home-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
 }
 
 h1 {
@@ -32,7 +47,7 @@ h2 {
 }
 
 main {
-    width: 100%; /* Supprime la limite */
+    width: 100%;
     margin: 0 auto;
     padding: 1rem;
     background-color: #fff;
@@ -40,9 +55,8 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 p {
-    margin: 0.8rem 0; /* Réduction de l'espacement entre les paragraphes */
+    margin: 0.8rem 0;
 }
 
 a {
@@ -61,4 +75,90 @@ footer {
     color: #fff;
     margin-top: 2rem;
     border-top: 2px solid #444;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #555;
+}
+
+/* Styles pour les écrans de taille moyenne (tablettes, écrans plus petits) */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    .home-button {
+        left: 0.5rem;
+        top: 50%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+
+    /* Bouton scroll vers le haut */
+    #scrollToTopBtn {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* Styles pour les petits écrans (smartphones) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .home-button {
+        left: 1rem;
+    }
+
+    .home-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    #scrollToTopBtn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
 }
