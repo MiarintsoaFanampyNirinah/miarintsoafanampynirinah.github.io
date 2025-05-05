@@ -1,78 +1,128 @@
-/* Global Styles */
 body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #fff;
-  color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* noir pur */
+    color: white;
 }
 
-.main-section {
-  display: flex;
-  width: 100%;
-  height: 100%;
+/* Container principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 2rem;
 }
 
-.left-section {
-  flex: 1;
-  background-color: black;
-  color: white;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+/* Colonnes flexibles */
+.left, .middle, .right {
+    flex: 1;
+    min-width: 280px;
 }
 
-.left-section h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+/* Titres avec glow blanc/bleu */
+.left h2, 
+.software-mastered h2 {
+    margin-top: 1rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
 }
 
-.left-section p {
-  font-size: 18px;
-  margin-bottom: 20px;
+/* Listes propres */
+.left ul {
+    list-style: none;
+    padding-left: 1rem;
 }
 
-.read-story-btn {
-  background-color: white;
-  color: black;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
+.left li {
+    margin-bottom: 0.5rem;
 }
 
-.social-icons a {
-  margin-right: 10px;
+/* Barres de progression */
+.middle {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 2rem;
 }
 
-.social-icons img {
-  width: 32px;
-  height: 32px;
+.progress-bar {
+    width: 100%;
+    height: 12px; /* Réduction de la taille */
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
 }
 
-.footer-links a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  margin-bottom: 10px;
+.progress-bar .fill {
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    width: 0%; /* Valeur de départ */
+    transition: width 0.5s ease-in-out;
 }
 
-.right-section {
-  flex: 1;
-  position: relative;
-  background: url('background.jpg') no-repeat center center;
-  background-size: cover;
+
+/* Section droite avec GIFs */
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    padding-top: 4rem;
 }
 
-.right-section img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(10px); /* Blur effect */
+.gif-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.gif-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* GIF redimensionnable : ajouter la classe si besoin */
+.resizable-gif {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+}
+
+/* Section Logiciels maîtrisés */
+.software-mastered {
+    padding: 2rem;
+    text-align: center;
+}
+
+.software-mastered h2 {
+    color: white;
+    text-shadow: 0 0 8px rgba(150, 150, 150, 0.8);
+}
+
+/* Rectangle logiciel responsive */
+.software-rectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 1rem;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.software-rectangle img {
+    max-height: 400px;
+    width: auto;
+    border-radius: 10px;
+    object-fit: contain;
 }
