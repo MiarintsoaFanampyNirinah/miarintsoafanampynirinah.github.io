@@ -1,0 +1,100 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #fff, 0 0 40px #fff;
+    text-align: center;
+    width: 300px;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+button {
+    padding: 0.7rem 1.5rem;
+    border: 1px solid #fff;
+    background: transparent;
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#message {
+    margin-top: 2rem;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+#message.error {
+    color: red;
+}
+
+#message.success {
+    color: #0f0;
+}
+
+#homeBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#homeBtn button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#homeBtn img {
+    width: 40px;
+    height: 40px;
+    filter: invert(1);
+    transition: transform 0.3s;
+}
+
+#homeBtn img:hover {
+    transform: scale(1.1);
+}
