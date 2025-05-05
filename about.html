@@ -1,42 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>À propos de moi</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos</title>
+    <link rel="stylesheet" href="styleabout.css">
+          <link rel="stylesheet" href="sync.css">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="left-section">
-      <div class="hamburger-menu">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+  <div id="overlay"></div>
+  <div id="container">
+    <!-- Barre latérale -->
+    <div class="sidebar">
+      <ul>
+        <div class="sidebar-image-container">
+          <img src="mitriiini_text.png" alt="Image de la barre latérale" class="sidebar-image">
+        </div>
+        <div class="close-btn"><img src="close.png" alt="Back"></div>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="login.html">Projets</a></li>
+        <li><a href="security.html">Portfolio</a></li>
+        <li><a href="comingsoon.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">À propos</a></li>
+      </ul>
+    </div>
+   <!-- En-tête -->
+    <header>
+      <div class="left-section">
+        <!-- Logo ou image du logo, si nécessaire -->
       </div>
-      <img src="icon.png" alt="Logo" class="header-logo">
-      <p class="header-text">Mon Portfolio</p>
-    </div>
-    <input type="text" class="search-bar" placeholder="Rechercher...">
-    <div class="right-section">
-      <p class="main-text">Bienvenue</p>
-      <p class="sub-text">Découvrez mes projets</p>
-      <img src="icon.png" alt="Profile" class="profile-img">
-    </div>
-  </header>
+      <div class="right-section">
+        <div class="hamburger-menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </header>
 
-  <!-- Body -->
-  <main>
-    <h1>À propos de moi</h1>
-    <p>Voici quelques informations sur moi...</p>
-  </main>
+    <main>
+        <div class="cards-container">
+            <div class="card" id="card1">
+                <h2>À propos</h2>
+                <p>Je suis un créateur passionné, développant des projets digitaux uniques. Mon objectif est d'apporter une touche innovante dans chaque expérience numérique que je construis, combinant technologie de pointe et créativité futuriste.</p>
+            </div>
+            <div class="card" id="card2">
+                <h2>Mon Parcours</h2>
+                <p>Depuis mes débuts, j'ai exploré plusieurs domaines, passant du développement web aux jeux vidéo, avec une approche autodidacte mêlée à des formations intensives. Mon parcours est une fusion d'apprentissages constants et d'expérimentations audacieuses.</p>
+            </div>
+            <div class="card" id="card3">
+                <h2>Ma Vision</h2>
+                <p>Je crois en un futur digital immersif où les expériences ne sont plus seulement fonctionnelles mais profondément émotionnelles. Mon ambition est de créer des univers où technologie et émotions se rencontrent pour captiver et inspirer.</p>
+            </div>
+            <div class="card" id="card4">
+                <h2>Ce que je propose</h2>
+                <p>Je propose des services variés allant de la création de sites web futuristes, au design interactif, jusqu'au développement de jeux immersifs. Chaque projet est conçu sur mesure avec une attention particulière à l'esthétique, la performance et l'originalité.</p>
+            </div>
+        </div>
+    </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2024 Mon Portfolio</p>
-  </footer>
+    <!-- Pied de page -->
+    <footer>
+      <p class="copyright">&copy; 2025 Mitriiini-Studio. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="terms.html">Conditions d'utilisation</a> | 
+        <a href="privacy.html">Politique de confidentialité</a>
+      </div>
 
-  <script src="script.js"></script>
+      <!-- Bouton de basculement de thème -->
+      <div class="toggle-theme">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </footer>
+
+    <script src="scriptabout.js" ></script>
+    <script src="sync.js" defer></script>
+    <script>
+      // Désactive le menu contextuel
+      document.addEventListener('contextmenu', event => event.preventDefault());
+
+      // Désactive les raccourcis clavier pour la protection du contenu
+      document.addEventListener('keydown', function (event) {
+        if (
+          event.keyCode === 123 || // F12
+          (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
+          (event.ctrlKey && event.keyCode === 85) || // Ctrl+U
+          (event.ctrlKey && event.keyCode === 83)    // Ctrl+S
+        ) {
+          event.preventDefault();
+        }
+      });
+        </script>
 </body>
 </html>
